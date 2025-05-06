@@ -96,10 +96,11 @@
 body,
 html {
     height: 100%;
-    margin: 0;
+    margin: auto;
     text-wrap: pretty;
     background-color: var(--white_color);
     scroll-behavior: smooth;
+    max-width: 1400px;
 }
 
 /* *======== Typography =========== */
@@ -326,6 +327,8 @@ p {
     box-shadow: var(--shadow-md);
     font-weight: normal;
     padding: 0.5rem 1rem;
+    max-width: 1400px;
+    margin: auto;
 }
 
 /* & ++++++++ Brand Styling ++++++++ */
