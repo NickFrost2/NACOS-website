@@ -1,0 +1,481 @@
+/* ~ CSS Comment code  */
+/* *======== Sections =========== */
+/* ? ------- Sub-sections -------- */
+/* & ++++++++ more details ++++++++ */
+/* !!!!!! Handle with care !!!!!!! */
+/* ^^^^^^^ Optional Section ^^^^^^^ */
+/* ----------- explanation --------- */
+
+/* *========= Executive Sections =========== */
+.executive-section {
+    margin-top: 3rem;
+}
+
+/* *========= Top Officials =========== */
+.officials .executive-container {
+    padding: 20px 30px;
+    margin: 0 auto -20px auto;
+}
+
+.officials .executive-img-container {
+    height: 300px;
+    overflow: hidden;
+}
+
+.officials .card {
+    background: #f09819;
+    background: -webkit-linear-gradient(358deg, #f09819 0%, #edde5d 100%);
+    background: linear-gradient(358deg, #f09819 0%, #edde5d 100%);
+    border-radius: 0 !important;
+}
+
+.officials .executive-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.officials .col {
+    padding: 15px;
+}
+
+.officials .card-body {
+    font-size: var(--font-lg);
+    margin: 0;
+}
+
+/* *========= Modal Design =========== */
+/* ? ------- Custom Modal Card -------- */
+.custom-modal {
+    background: #f09819;
+    background: -webkit-linear-gradient(358deg, #f09819 0%, #edde5d 100%);
+    background: linear-gradient(358deg, #f09819 0%, #edde5d 100%);
+    color: var(--black_color);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--white_color);
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(15px);
+    width: clamp(300px, 80vw, 1000px);
+    margin: auto;
+}
+
+.modal-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.modal-img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.modal-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.modal-info h5 {
+    font-size: var(--font-xl);
+    font-weight: var(--font-regular);
+    margin-bottom: 0.75rem;
+    color: var(--primary_color);
+}
+
+.modal-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: var(--font-md);
+    color: var(--primary_color);
+    text-align: start;
+}
+
+.modal-info ul li {
+    margin-bottom: var(--space-sm);
+}
+
+.modal-info ul li a {
+    font-size: 1.5rem;
+    margin: 0 var(--space-sm);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+/* *========= Department Executive =========== */
+.executive-container {
+    margin: 20px auto;
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.exe-cont {
+    background:
+        linear-gradient(320deg, rgba(1, 71, 1, 0.37) 0%, var(--accent_color) 50%),
+        linear-gradient(135deg, #0000 20.5%, var(--primary_color) 0 29.5%, #0000 0) 0 50px,
+        linear-gradient(45deg, #0000 8%, var(--primary_color) 0 17%, #0000 0 58%) 100px 0,
+        linear-gradient(135deg, #0000 8%, var(--primary_color) 0 17%, #0000 0 58%, var(--primary_color) 0 67%, #0000 0),
+        linear-gradient(45deg, #0000 8%, var(--primary_color) 0 17%, #0000 0 58%, var(--primary_color) 0 67%, #0000 0 83%, var(--primary_color) 0 92%, #0000 0),
+        var(--accent_color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 40px;
+}
+
+/* ? ------- Card Design -------- */
+.card {
+    text-align: center;
+    background: var(--white_color);
+    padding: 0;
+    border-radius: var(--radius-md) !important;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s cubic-bezier(0.6, 0.4, 0, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    color: var(--black_color);
+    height: 400px;
+    box-shadow: var(--shadow-md);
+    margin: 0 auto;
+    border: none;
+}
+
+.executive-img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 0 !important;
+}
+
+.card-body {
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.card-title {
+    font-size: var(--font-lg);
+    font-weight: var(--font-regular);
+    margin-bottom: var(--space-sm);
+}
+
+.card-text {
+    color: var(--primary_color);
+    margin-bottom: var(--space-md);
+}
+
+/* ? ------- Card Overlay -------- */
+.card__overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--white_color);
+    color: var(--primary_color);
+    border-radius: var(--radius-md);
+    padding: 25px;
+    top: 100%;
+    transition: all 1s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+.card.active .card__overlay {
+    top: 0;
+}
+
+.card.active>div:not(.card__overlay),
+.card.active>.card-body,
+.card.active>.executive-img-container {
+    opacity: 0;
+}
+
+.close-details {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--primary_color);
+    font-size: var(--font-lg);
+    cursor: pointer;
+}
+
+.detail-section {
+    margin-bottom: var(--space-sm);
+    text-align: left;
+    width: 100%;
+}
+
+.detail-section i {
+    text-align: center;
+}
+
+.details-title {
+    margin-bottom: var(--space-md);
+    border-bottom: 1px solid rgba(19, 100, 8, 0.2);
+    padding-bottom: var(--space-sm);
+    width: 100%;
+    text-align: left;
+}
+
+.detail-list {
+    list-style-type: none;
+    padding-left: 5px;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    text-align: left;
+}
+
+.detail-list li {
+    margin-bottom: 0.25rem;
+}
+
+/* *========= Governor Carousel Section =========== */
+.profile-showcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 15px;
+    margin: 30px 0;
+    height: max-content;
+}
+
+.profile-showcase__title {
+    color: var(--black_color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-carousel__wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* ? ------- Carousel Container -------- */
+.profile-carousel__container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    text-align: center;
+}
+
+.profile-carousel__container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome/Safari/Opera */
+}
+
+/* ? ------- Profile Card -------- */
+.profile-card {
+    flex: 0 0 auto;
+    width: 300px;
+    height: max-content;
+    padding-top: 20px;
+    border: 1px solid var(--accent_color);
+    max-width: 70vw;
+    background-color: var(--white_color);
+    border-radius: var(--radius-md);
+    scroll-snap-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+}
+
+.profile-card__image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px 12px 0 0;
+    clip-path: circle();
+}
+
+.profile-card__content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px;
+    gap: 0;
+}
+
+.profile-card__name {
+    font-size: var(--font-lg);
+    font-weight: var(--font-regular);
+    color: var(--black_color);
+    margin-bottom: 1px;
+}
+
+.profile-card__role {
+    font-size: var(--font-md);
+    color: var(--primary_color);
+    margin-bottom: 1px;
+}
+
+.profile-card__social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+}
+
+.profile-card__social-link {
+    transition: var(--transition);
+}
+
+.profile-card__social-link:hover {
+    color: var(--primary_color);
+}
+
+.profile-card__level {
+    font-size: var(--font-lg);
+    font-weight: var(--font-bold);
+    color: var(--primary_color);
+    margin-top: 5px;
+}
+
+/* ? ------- Carousel Navigation -------- */
+.profile-carousel__nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--accent_color);
+    border: none;
+    color: #333;
+    font-size: var(--font-xl);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.profile-carousel__nav-btn:hover {
+    background: var(--primary_color);
+    color: var(--white_color);
+}
+
+.profile-carousel__nav-btn--prev {
+    left: -25px;
+}
+
+.profile-carousel__nav-btn--next {
+    right: -25px;
+}
+
+/* ? ------- Carousel Indicators -------- */
+.profile-carousel__indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.profile-carousel__indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent_color);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.profile-carousel__indicator:hover {
+    background-color: var(--primary_color);
+}
+
+.profile-carousel__indicator--active {
+    background-color: var(--black_color);
+    transform: scale(1.2);
+}
+
+/* *========= Button Styles =========== */
+.join_button {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.join-btn {
+    gap: var(--space-sm);
+    padding: 0.75rem 1.5rem;
+    font-weight: var(--font-regular);
+}
+
+/* *========= Media Queries =========== */
+/* ? ------- Modal Responsive Layout -------- */
+@media (min-width: 768px) {
+    .modal-content-container {
+        flex-direction: row;
+        gap: 0;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .modal-info {
+        padding-left: var(--space-md);
+    }
+}
+
+/* ? ------- Carousel Responsive Layout -------- */
+@media (max-width: 768px) {
+    .profile-card {
+        width: 260px;
+    }
+
+    .profile-carousel__nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-lg);
+    }
+
+    .profile-carousel__nav-btn--prev {
+        left: -10px;
+    }
+
+    .profile-carousel__nav-btn--next {
+        right: -10px;
+    }
+}
