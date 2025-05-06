@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Premium Footer Styling */
+        .footer {
+            position: relative;
+            background: linear-gradient(135deg, #152637 0%, #000B18 100%);
+            color: #fff;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Wave Animation */
+        .footer-waves {
+            position: relative;
+            width: 100%;
+            height: 80px;
+            margin-bottom: -10px;
+            min-height: 80px;
+            max-height: 150px;
+        }
+
+        .waves {
+            position: relative;
+            width: 100%;
+            height: 80px;
+            margin-bottom: -7px;
+            min-height: 80px;
+            max-height: 150px;
+        }
+
+        .parallax>use {
+            animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+        }
+
+        .parallax>use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+        }
+
+        .parallax>use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+        }
+
+        .parallax>use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+        }
+
+        .parallax>use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+
+        @keyframes move-forever {
+            0% {
+                transform: translate3d(-90px, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(85px, 0, 0);
+            }
+        }
+
+        /* Main Content */
+        .footer-content {
+            padding: 40px 0 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        /* Brand Section */
+        .footer-brand {
+            flex: 1 1 300px;
+        }
+
+        .footer-logo {
+            font-size: 26px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            margin: 0 0 15px;
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            background-clip: text;
+        }
+
+        .footer-tagline {
+            color: #adb5bd;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        /* Social Icons */
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .facebook {
+            background: #3b5998;
+        }
+
+        .twitter {
+            background: #000000;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        }
+
+        .linkedin {
+            background: #0077b5;
+        }
+
+        .youtube {
+            background: #ff0000;
+        }
+
+        /* Links Container */
+        .footer-links-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            flex: 1 1 400px;
+        }
+
+        .footer-column {
+            flex: 1 1 160px;
+            min-width: 160px;
+        }
+
+        .footer-heading {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-heading:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: #4facfe;
+            border-radius: 3px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+            transform: translateX(5px);
+        }
+
+        .footer-links a:before {
+            content: "\f105";
+            font-family: 'FontAwesome';
+            margin-right: 8px;
+            color: #4facfe;
+            opacity: 0;
+            transform: translateX(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover:before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Newsletter Section */
+        .footer-newsletter {
+            flex: 1 1 300px;
+        }
+
+        .newsletter-text {
+            color: #adb5bd;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form .form-group {
+            position: relative;
+            overflow: hidden;
+            border-radius: 50px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+
+        .newsletter-form input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            padding: 15px 25px;
+            font-size: 15px;
+            color: #fff;
+            outline: none;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #adb5bd;
+        }
+
+        .newsletter-form button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 50px;
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .newsletter-form button:hover {
+            width: 80px;
+        }
+
+        .newsletter-info {
+            display: flex;
+            gap: 8px;
+            color: #adb5bd;
+            font-size: 12px;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .newsletter-info i {
+            color: #4facfe;
+            margin-top: 2px;
+        }
+
+        .footer-contact {
+            color: #adb5bd;
+        }
+
+        .footer-contact p {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-contact i {
+            color: #4facfe;
+        }
+
+        /* Bottom Section */
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .copyright {
+            color: #adb5bd;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-bottom-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-links a:hover {
+            color: #fff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .footer-container {
+                gap: 50px;
+            }
+
+            .footer-links-container {
+                flex: 1 1 100%;
+                justify-content: space-between;
+            }
+
+            .footer-brand,
+            .footer-newsletter {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-bottom-links {
+                justify-content: center;
+            }
+
+            .footer-waves {
+                height: 60px;
+            }
+
+            .waves {
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-links-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-column {
+                flex: 1 1 100%;
+            }
+
+            .footer-heading {
+                margin-bottom: 15px;
+            }
+
+            .footer-links li {
+                margin-bottom: 8px;
+            }
+
+            .social-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <footer class="footer">
+        <div class="footer-waves">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-container">
+                <!-- Logo and Quick Description -->
+                <div class="footer-column footer-brand">
+                    <h3 class="footer-logo">UNIVERSITY</h3>
+                    <p class="footer-tagline">Empowering students through education, research, and community engagement
+                        since 1975.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-btn facebook">
+                            <i class="fa fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-btn twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-btn instagram">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-btn linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-btn youtube">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Link Groups -->
+                <div class="footer-links-container">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Resources</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Syllabus</a></li>
+                            <li><a href="#">Library</a></li>
+                            <li><a href="#">Portal</a></li>
+                            <li><a href="#">Results</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Programs</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Undergraduate</a></li>
+                            <li><a href="#">Postgraduate</a></li>
+                            <li><a href="#">Diploma</a></li>
+                            <li><a href="#">Scholarships</a></li>
+                            <li><a href="#">Research</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Community</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Clubs</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Alumni</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Volunteer</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-column footer-newsletter">
+                    <h4 class="footer-heading">Stay Updated</h4>
+                    <p class="newsletter-text">Subscribe to our newsletter for the latest updates and events</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">
+                                <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="newsletter-info">
+                            <i class="fa fa-lock"></i>
+                            <small>We respect your privacy and will never share your information.</small>
+                        </div>
+                    </form>
+                    <div class="footer-contact">
+                        <p><i class="fa fa-envelope"></i> contact@university.edu</p>
+                        <p><i class="fa fa-phone"></i> +1 (555) 123-4567</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 University Name. All rights reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
