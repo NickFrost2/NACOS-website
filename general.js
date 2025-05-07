@@ -388,7 +388,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 AOS.init({
                     duration: 1000,  // Animation duration
                     startEvent: "DOMContentLoaded",// Ensure AOS runs after the DOM is fully loaded
-                    once: true,      // Animation runs once
+                    // once: true,      // Animation runs once
                 });
             };
         AOS.refresh();
