@@ -92,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (el) el.innerHTML = data;
         })
         .catch(error => console.error("Error loading social handles:", error));
-
     /* 
     ? ------- Footer Section -------- */
     fetch("footer.html")
@@ -363,7 +362,7 @@ document.addEventListener("DOMContentLoaded", function () {
       This version only works in secure contexts (HTTPS)
       Kept for reference but not used
      */
-    /* 
+    /*
     const copyButtons = document.querySelectorAll('.copy-button');
 
     copyButtons.forEach(button => {
@@ -384,6 +383,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
     */
+    // * ======= AOS Animation
+    window.onload = function () {
+                AOS.init({
+                    duration: 1000,  // Animation duration
+                    startEvent: "DOMContentLoaded",// Ensure AOS runs after the DOM is fully loaded
+                    once: true,      // Animation runs once
+                });
+            };
+        AOS.refresh();
 });
 
 /* 

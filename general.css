@@ -91,6 +91,16 @@
 } 
 */
 
+/* ~Animation AOS */
+.only-fade {
+    transform: none !important;
+        /* Removes the upward motion */
+}
+
+.hover-shake:hover {
+    animation: headShake 1s;
+}
+
 /* ^^^^^^^^^^ End Optional Scrollbar Styling ^^^^^^^^^ */
 
 body,
@@ -101,6 +111,9 @@ html {
     background-color: var(--white_color);
     scroll-behavior: smooth;
     max-width: 1400px;
+}
+body {
+    overflow-x: hidden;
 }
 
 /* *======== Typography =========== */
