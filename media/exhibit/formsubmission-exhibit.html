@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        h1 {
+            text-align: center;
+            margin: 35px 0 20px 0 !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <form id="contact-form">
+        <input type="text" name="name" required placeholder="Your Name">
+        <input type="email" name="email" required placeholder="Your Email">
+        <textarea name="message" required placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+
+    <div id="form-feedback" style="display:none;">Thanks for your submission!</div>
+    <div id="form-error" style="display:none;">Something went wrong. Please try again.</div>
+
+    <script>
+        // Form Submission Handler
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch("https://usebasin.com/f/5c7379141745", {
+                method: "POST",
+                body: formData
+            }).then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById("form-feedback").style.display = "block";  // Show success message
+                        form.reset();  // Reset form
+                    } else {
+                        document.getElementById("form-error").style.display = "block";  // Show error message
+                    }
+                }).catch((error) => {
+                    console.error('Error:', error);
+                    document.getElementById("form-error").style.display = "block";  // Show error message on failure
+                });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
